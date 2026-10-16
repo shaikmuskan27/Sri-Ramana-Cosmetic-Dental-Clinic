@@ -78,7 +78,7 @@
     </button>
 
     <!-- Left: Navigation Links matching Reference Image -->
-    <nav class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-[13px] xl:text-sm font-medium tracking-normal">
+    <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-6 text-[12.5px] xl:text-sm font-medium tracking-normal flex-shrink-0">
       <a class="text-[#DFBE7B] font-semibold hover:text-[#E6C687] transition-colors relative py-1" href="#home">Home</a>
       <a class="text-white hover:text-[#DFBE7B] transition-colors py-1" href="#about">About</a>
       
@@ -107,21 +107,21 @@
     </nav>
 
     <!-- Center: Practice Name -->
-    <a href="#home" class="flex items-center justify-center group cursor-pointer text-center select-none py-1">
-      <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
-        <span class="font-serif italic text-sm sm:text-base lg:text-[18px] tracking-wide text-[#E6C687] font-medium leading-none group-hover:text-white transition-colors" style="font-family: 'Playfair Display', Georgia, serif;">
+    <a href="#home" class="flex items-center justify-center group cursor-pointer text-center sm:text-left select-none py-1 min-w-0 flex-shrink-0">
+      <div class="flex flex-col items-center sm:items-start text-center sm:text-left min-w-0">
+        <span class="font-serif italic text-xs xs:text-[13px] sm:text-base lg:text-[17px] xl:text-[18px] tracking-wide text-[#E6C687] font-medium leading-tight whitespace-nowrap group-hover:text-white transition-colors" style="font-family: 'Playfair Display', Georgia, serif;">
           Sri Ramana Cosmetic Dental Clinic
         </span>
-        <span class="text-[7px] sm:text-[8px] uppercase tracking-[0.24em] text-[#C59A58]/90 font-medium mt-1 leading-none">
+        <span class="text-[6.5px] xs:text-[7.5px] sm:text-[8px] uppercase tracking-[0.16em] sm:tracking-[0.24em] text-[#C59A58]/90 font-medium mt-0.5 sm:mt-1 leading-none whitespace-nowrap">
           Excellence in Cosmetic &amp; Family Dentistry
         </span>
       </div>
     </a>
 
-    <!-- Right: Header Action Buttons matching Reference Image -->
-    <div class="flex items-center gap-2 sm:gap-3">
+    <!-- Right: Header Action Buttons (Responsive: compact on mobile, full on sm+) -->
+    <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
       <!-- AI Voice Concierge Quick Trigger in Header -->
-      <button onclick="toggleVoiceAgent()" title="Talk to AI Voice Receptionist" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-[3px] bg-black/25 hover:bg-black/45 text-[#E6C687] border border-brand-gold/30 text-xs font-semibold tracking-wide transition-all shadow-sm group cursor-pointer" id="header-voice-btn">
+      <button onclick="toggleVoiceAgent()" title="Talk to AI Voice Receptionist" class="hidden xl:inline-flex items-center gap-1.5 px-3 py-2.5 sm:py-3 rounded-[3px] bg-black/25 hover:bg-black/45 text-[#E6C687] border border-brand-gold/30 text-xs font-semibold tracking-wide transition-all shadow-sm group cursor-pointer" id="header-voice-btn">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
@@ -130,16 +130,27 @@
         <span class="hidden 2xl:inline text-[11px] uppercase tracking-wider font-bold">Voice AI</span>
       </button>
 
-      <!-- Button 1: Request An Appointment > (Exact Title Case & Dark Overlay Box styling from image) -->
-      <a class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 lg:px-6 py-2.5 sm:py-3.5 rounded-[3px] bg-black/25 hover:bg-black/45 text-white text-xs sm:text-[13px] font-semibold tracking-normal transition-all border border-white/10 shadow-sm group cursor-pointer" href="#appointment">
+      <!-- Desktop Button 1: Request An Appointment > (>= sm) -->
+      <a class="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 lg:px-6 py-2.5 sm:py-3.5 rounded-[3px] bg-black/25 hover:bg-black/45 text-white text-xs sm:text-[13px] font-semibold tracking-normal transition-all border border-white/10 shadow-sm group cursor-pointer whitespace-nowrap" href="#appointment">
         <span>Request An Appointment</span>
         <span class="material-symbols-outlined text-[16px] text-white/90 group-hover:translate-x-0.5 transition-transform font-bold">chevron_right</span>
       </a>
 
-      <!-- Button 2: (510) 886-5112 > (Exact Solid White Box with Dark Text styling from image) -->
-      <a class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-[3px] bg-white hover:bg-[#FAF6F0] text-[#38251C] text-xs sm:text-[13px] font-bold tracking-normal transition-all shadow-md group border border-white cursor-pointer" href="tel:+15108865112" onclick="handlePhoneClick(event, '(510) 886-5112')">
+      <!-- Mobile Button 1: Book Compact (< sm) -->
+      <a class="inline-flex sm:hidden items-center gap-1 px-2.5 py-1.5 rounded-[3px] bg-black/25 hover:bg-black/45 text-white text-xs font-semibold tracking-normal transition-all border border-white/10 shadow-sm group cursor-pointer whitespace-nowrap" href="#appointment">
+        <span>Book</span>
+        <span class="material-symbols-outlined text-[13px] text-white/90 group-hover:translate-x-0.5 transition-transform font-bold">chevron_right</span>
+      </a>
+
+      <!-- Desktop Button 2: (510) 886-5112 > (>= sm) -->
+      <a class="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-[3px] bg-white hover:bg-[#FAF6F0] text-[#38251C] text-xs sm:text-[13px] font-bold tracking-normal transition-all shadow-md group border border-white cursor-pointer whitespace-nowrap" href="tel:+15108865112" onclick="handlePhoneClick(event, '(510) 886-5112')">
         <span>(510) 886-5112</span>
         <span class="material-symbols-outlined text-[16px] text-[#38251C] group-hover:translate-x-0.5 transition-transform font-bold">chevron_right</span>
+      </a>
+
+      <!-- Mobile Button 2: Call Icon Button (< sm) -->
+      <a class="inline-flex sm:hidden items-center justify-center w-8 h-8 rounded-[3px] bg-white hover:bg-[#FAF6F0] text-[#38251C] shadow-md transition-all border border-white cursor-pointer" href="tel:+15108865112" onclick="handlePhoneClick(event, '(510) 886-5112')" title="Call (510) 886-5112">
+        <span class="material-symbols-outlined text-[17px]">call</span>
       </a>
     </div>
   </div>
