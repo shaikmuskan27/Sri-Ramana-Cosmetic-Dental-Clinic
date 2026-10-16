@@ -1,6 +1,6 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Sri Ramana Cosmetic Dental Clinic | Nandyal</title>
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -37,7 +37,39 @@
     };
   </script>
 <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF6F0; color: #221915; }
+    /* Complete edge-to-edge mobile fit & zero overflow */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF6F0;
+      color: #221915;
+      position: relative;
+    }
+    main {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    img, video, iframe {
+      max-width: 100%;
+    }
     h1, h2, h3, .font-serif { font-family: 'Playfair Display', Georgia, serif; }
     .font-script { font-family: 'Alex Brush', cursive; }
     .gold-gradient { background: linear-gradient(135deg, #DFBE7B 0%, #B88942 100%); }
@@ -222,8 +254,8 @@
 
 <!-- Heritage & Trust Numbers Strip in Rich Espresso Container (matching brown bar directly beneath video in image) -->
 <section class="w-full bg-[#38251C] text-white border-y border-brand-gold/20 py-8">
-  <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+  <div class="max-w-[1360px] w-full mx-auto px-3.5 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
       <div class="p-2">
         <p class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-goldlight">20+</p>
         <p class="text-xs sm:text-sm text-gray-300 mt-1 font-medium">Years of Heritage</p>
@@ -244,7 +276,8 @@
   </div>
 </section>
 <!-- 2. WHY PATIENTS CHOOSE US (Reference 3 & 9 layout: Carousel cards with round icons) -->
-<section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20" id="why-choose-us">
+<section class="w-full bg-brand-cream py-14 lg:py-20 overflow-hidden" id="why-choose-us">
+<div class="max-w-[1360px] w-full mx-auto px-3.5 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 <!-- Left: Editorial Headline & Navigation Arrows -->
 <div class="lg:col-span-4 flex flex-col justify-between">
@@ -386,6 +419,7 @@
   </div>
 </div>
 </div>
+</div>
 </section>
 <!-- 3. MEET YOUR DENTAL TEAM (Reference 3 Doctor Spotlight Card layout) -->
 <section class="w-full bg-brand-creambuff py-16 lg:py-24" id="about">
@@ -434,7 +468,8 @@
 </div>
 </section>
 <!-- 4. PROVIDED SERVICES -->
-<section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24" id="services">
+<section class="w-full bg-brand-cream py-16 lg:py-24 overflow-hidden" id="services">
+<div class="max-w-[1360px] w-full mx-auto px-3.5 sm:px-6 lg:px-8">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-brand-gold/20">
 <div>
 <span class="text-xs uppercase tracking-[0.2em] text-brand-bronze font-bold block mb-2">Specialized Care by Dr. Sri Ramana</span>
@@ -592,6 +627,7 @@
   <a href="#appointment" onclick="selectServiceAndBook('consultation')" class="text-brand-bronze hover:text-brand-espresso font-semibold uppercase tracking-wider underline whitespace-nowrap transition-colors">
     Schedule Consultation &rarr;
   </a>
+</div>
 </div>
 </section>
 <!-- 5. APPOINTMENT BOOKING & CLINIC EXTERIOR (Exact Reference 2 Layout) -->
@@ -1073,7 +1109,8 @@
 </section>
 
 <!-- 7. REGIONAL REACH & GOOGLE MAPS SECTION (Exact Reference 1 Layout) -->
-<section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24" id="contact">
+<section class="w-full bg-brand-cream py-16 lg:py-24 overflow-hidden" id="contact">
+<div class="max-w-[1360px] w-full mx-auto px-3.5 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 <!-- Left Column: Regional Hubs and Description -->
 <div class="lg:col-span-6">
@@ -1172,6 +1209,7 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 </main>
 <!-- FULL CLINIC FOOTER (Reference 8 style) -->
@@ -1259,7 +1297,7 @@
      - Synthetic Web Audio API connect/mic chimes
      - Direct config hooks to replace with Vapi, Retell, ElevenLabs, or OpenAI
      ========================================================================= -->
-<div id="voice-agent-root" class="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-auto font-sans">
+<div id="voice-agent-root" class="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-auto font-sans max-w-[calc(100vw-1.5rem)]">
   
   <!-- Floating Voice Trigger Button -->
   <button id="voice-agent-trigger" onclick="toggleVoiceAgent()" aria-label="Talk to Sri Ramana AI Voice Assistant" class="group flex items-center gap-3 px-4 sm:px-5 py-3.5 bg-[#241711] text-white rounded-full shadow-2xl border border-brand-gold/50 hover:border-brand-gold hover:bg-[#342218] transition-all duration-300 hover:scale-[1.03] focus:outline-none focus:ring-2 focus:ring-brand-gold">
