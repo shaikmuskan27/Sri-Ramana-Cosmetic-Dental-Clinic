@@ -101,6 +101,7 @@
       </div>
 
       <a class="text-white hover:text-[#DFBE7B] transition-colors py-1" href="#why-choose-us">Patient Info</a>
+      <a class="text-white hover:text-[#DFBE7B] transition-colors py-1" href="#faqs">FAQs</a>
       <a class="text-white hover:text-[#DFBE7B] transition-colors py-1 cursor-pointer" onclick="openPaymentModal()">Make a Payment</a>
       <a class="text-white hover:text-[#DFBE7B] transition-colors py-1" href="#contact">Contact</a>
     </nav>
@@ -150,6 +151,7 @@
       <a onclick="toggleMobileNav()" class="text-white hover:text-brand-goldlight" href="#about">About</a>
       <a onclick="toggleMobileNav()" class="text-white hover:text-brand-goldlight" href="#services">Services</a>
       <a onclick="toggleMobileNav()" class="text-white hover:text-brand-goldlight" href="#why-choose-us">Patient Info</a>
+      <a onclick="toggleMobileNav()" class="text-white hover:text-brand-goldlight" href="#faqs">FAQs</a>
       <a onclick="toggleMobileNav(); openPaymentModal();" class="text-white hover:text-brand-goldlight cursor-pointer">Make a Payment</a>
       <a onclick="toggleMobileNav()" class="text-white hover:text-brand-goldlight" href="#contact">Contact</a>
       <div class="pt-3 border-t border-brand-gold/20 flex flex-col gap-2">
@@ -876,7 +878,190 @@
 
 <!-- TOAST NOTIFICATION CONTAINER -->
 <div id="toast-container" class="fixed top-5 right-5 z-[9999] pointer-events-none flex flex-col gap-2 max-w-sm"></div>
-<!-- 6. REGIONAL REACH & GOOGLE MAPS SECTION (Exact Reference 1 Layout) -->
+
+<!-- 6. FREQUENTLY ASKED QUESTIONS (FAQs) SECTION -->
+<section class="w-full bg-brand-creambuff/40 py-16 lg:py-24 border-t border-b border-brand-gold/20" id="faqs">
+  <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-bronze font-bold block mb-2">Got Questions? We Have Answers</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-espresso">
+          Frequently Asked <span class="font-bold">Questions (FAQs)</span>
+        </h2>
+      </div>
+      <p class="text-brand-textmuted text-sm sm:text-base max-w-md mt-4 md:mt-0 leading-relaxed">
+        Everything you need to know about our dental treatments, ceramic implants, smile design, clinic procedures, and visiting Dr. Sri Ramana in Nandyal.
+      </p>
+    </div>
+
+    <!-- FAQ Categories Filter Bar -->
+    <div class="max-w-4xl mx-auto mb-8">
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-semibold">
+        <button onclick="filterFaqs('all')" id="faq-filter-all" class="faq-filter-btn px-4 py-2 rounded-full bg-brand-espresso text-white transition-all shadow-sm">All Questions</button>
+        <button onclick="filterFaqs('services')" id="faq-filter-services" class="faq-filter-btn px-4 py-2 rounded-full bg-white text-brand-espresso border border-brand-gold/30 hover:border-brand-bronze transition-all shadow-xs">Provided Services</button>
+        <button onclick="filterFaqs('implants')" id="faq-filter-implants" class="faq-filter-btn px-4 py-2 rounded-full bg-white text-brand-espresso border border-brand-gold/30 hover:border-brand-bronze transition-all shadow-xs">Ceramic Implants</button>
+        <button onclick="filterFaqs('laser')" id="faq-filter-laser" class="faq-filter-btn px-4 py-2 rounded-full bg-white text-brand-espresso border border-brand-gold/30 hover:border-brand-bronze transition-all shadow-xs">Laser &amp; Technology</button>
+        <button onclick="filterFaqs('appointments')" id="faq-filter-appointments" class="faq-filter-btn px-4 py-2 rounded-full bg-white text-brand-espresso border border-brand-gold/30 hover:border-brand-bronze transition-all shadow-xs">Appointments &amp; Payment</button>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion List -->
+    <div class="max-w-4xl mx-auto space-y-4" id="faq-accordion-list">
+      
+      <!-- FAQ Item 1 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="services">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            What core services are provided by Dr. Sri Ramana?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p class="mb-2">
+            Dr. Sri Ramana provides four primary specialized disciplines:
+          </p>
+          <ul class="space-y-1.5 list-disc list-inside text-brand-espresso font-medium pl-1 mb-2">
+            <li><strong>Cosmetic Dentistry:</strong> Smile makeovers, bespoke porcelain veneers, and composite bonding.</li>
+            <li><strong>Ceramic &amp; Dental Implants:</strong> Specialized metal-free zirconia implant placement and permanent fixed teeth solutions.</li>
+            <li><strong>Laser Procedures:</strong> Advanced modern dental treatments for soft tissue sculpting, periodontal care, and whitening.</li>
+            <li><strong>Routine Care:</strong> General check-ups, ultrasonic cleaning, and preventive dental maintenance.</li>
+          </ul>
+          <p>
+            In addition, we offer painless single-sitting root canals (RCT) and CAD/CAM monolithic zirconia crowns.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="implants">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            Why choose metal-free Ceramic &amp; Zirconia implants over titanium?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p>
+            Ceramic and Zirconia implants are 100% metal-free, hypoallergenic, and bio-inert. Unlike traditional metal implants, ceramic implants are tooth-colored (natural ivory), eliminating the risk of dark gray margins showing through your gums. They attract significantly less bacterial plaque, promoting healthier long-term gum tissue.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="services">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            Is cosmetic smile designing or veneer application painful?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p>
+            No, the procedure is minimally invasive and virtually painless. We utilize high-precision micro-preparation techniques that preserve maximum healthy natural tooth enamel. Computer-guided local anesthesia ensures that you stay comfortable and relaxed during the entire appointment.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="laser">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            What are the benefits of modern dental Laser Procedures?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p>
+            Laser dental procedures provide exceptional surgical accuracy with minimal to no bleeding, reduced swelling, and accelerated recovery times. Because the laser beam sterilizes tissue as it operates, infection risk is minimized. Laser dentistry is ideal for gum depigmentation, periodontal pocket disinfection, gummy smile corrections, and rapid in-office teeth whitening.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="services">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            How often should I come in for Routine Care &amp; teeth cleaning?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p>
+            We advise visiting every 6 months for general dental examinations and ultrasonic scaling (teeth cleaning). Routine maintenance eliminates hardened plaque (tartar) that regular brushing cannot remove, prevents periodontal disease, and identifies micro-cavities before they turn into major dental problems.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="appointments">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            How do I book an appointment with Dr. Sri Ramana?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p>
+            You can request a consultation directly using the <a href="#appointment" class="text-brand-bronze font-bold underline">Online Booking Form</a> above, call our reception helpline at <strong>(510) 886-5112</strong>, or visit our clinic at Srinivasa Nagar (opposite Canara Bank) in Nandyal. Our coordinator will contact you promptly to confirm your scheduled slot.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="faq-card bg-white rounded-xl border border-brand-gold/25 shadow-xs transition-all overflow-hidden" data-category="appointments">
+        <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
+          <span class="font-serif text-base sm:text-lg font-bold text-brand-espresso">
+            What payment methods do you accept, and do you issue receipts?
+          </span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0 transition-transform duration-300">
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+          </span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-brand-textmuted leading-relaxed border-t border-brand-gold/10 pt-4">
+          <p>
+            We accept all modern payment options including Google Pay, PhonePe, UPI, credit/debit cards, and cash. You can also make a digital payment and generate an official clinic receipt anytime by clicking <button onclick="openPaymentModal()" class="text-brand-bronze font-bold underline cursor-pointer">Make a Payment</button> in the top navigation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Help CTA Box -->
+    <div class="max-w-4xl mx-auto mt-10 bg-white p-6 sm:p-8 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4 text-center sm:text-left">
+        <div class="w-12 h-12 rounded-full bg-brand-creambuff text-brand-espresso flex items-center justify-center flex-shrink-0">
+          <span class="material-symbols-outlined text-[24px]">support_agent</span>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-bold text-brand-espresso">Have a question not listed here?</h4>
+          <p class="text-xs text-brand-textmuted">Speak directly with Dr. Sri Ramana or our patient care coordinator.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 w-full sm:w-auto">
+        <a href="tel:+15108865112" onclick="handlePhoneClick(event, '(510) 886-5112')" class="w-full sm:w-auto px-5 py-2.5 rounded bg-brand-creambuff hover:bg-brand-gold/20 text-brand-espresso font-bold text-xs uppercase tracking-wider transition-colors text-center border border-brand-gold/30">
+          Call (510) 886-5112
+        </a>
+        <a href="#appointment" class="w-full sm:w-auto px-5 py-2.5 rounded bg-brand-espresso hover:bg-brand-dark text-white font-bold text-xs uppercase tracking-wider transition-colors text-center shadow-md">
+          Book Visit
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. REGIONAL REACH & GOOGLE MAPS SECTION (Exact Reference 1 Layout) -->
 <section class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24" id="contact">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 <!-- Left Column: Regional Hubs and Description -->
@@ -1011,6 +1196,7 @@
 <li class=""><a class="hover:text-brand-goldlight transition-colors" href="#about">About Us</a></li>
 <li class=""><a class="hover:text-brand-goldlight transition-colors" href="#services">Services</a></li>
 <li class=""><a class="hover:text-brand-goldlight transition-colors" href="#why-choose-us">Why Patients Choose Us</a></li>
+<li class=""><a class="hover:text-brand-goldlight transition-colors" href="#faqs">Frequently Asked Questions</a></li>
 <li class=""><a class="hover:text-brand-goldlight transition-colors" href="#appointment">Request An Appointment</a></li>
 <li class=""><a class="hover:text-brand-goldlight transition-colors" href="#contact">Contact &amp; Location</a></li>
 </ul>
@@ -2053,7 +2239,46 @@
     }
   });
 
+  // 9. FAQ Accordion & Filter Logic
+  function toggleFaq(button) {
+    const card = button.closest('.faq-card');
+    const answer = card.querySelector('.faq-answer');
+    const icon = card.querySelector('.faq-icon');
+    const isOpen = !answer.classList.contains('hidden');
+
+    document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.faq-icon').forEach(el => el.classList.remove('rotate-180', 'bg-brand-espresso', 'text-white'));
+    document.querySelectorAll('.faq-card').forEach(el => el.classList.remove('ring-2', 'ring-brand-gold/40'));
+
+    if (!isOpen) {
+      answer.classList.remove('hidden');
+      icon.classList.add('rotate-180', 'bg-brand-espresso', 'text-white');
+      card.classList.add('ring-2', 'ring-brand-gold/40');
+    }
+  }
+
+  function filterFaqs(category) {
+    const cards = document.querySelectorAll('.faq-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    document.querySelectorAll('.faq-filter-btn').forEach(btn => {
+      btn.className = 'faq-filter-btn px-4 py-2 rounded-full bg-white text-brand-espresso border border-brand-gold/30 hover:border-brand-bronze transition-all shadow-xs';
+    });
+    const activeBtn = document.getElementById(`faq-filter-${category}`);
+    if (activeBtn) {
+      activeBtn.className = 'faq-filter-btn px-4 py-2 rounded-full bg-brand-espresso text-white transition-all shadow-sm';
+    }
+  }
+
   // 10. Global Window Bindings (Ensures 100% accessible inline onclick handlers)
+  window.toggleFaq = toggleFaq;
+  window.filterFaqs = filterFaqs;
   window.showToastNotification = showToastNotification;
   window.handlePhoneClick = handlePhoneClick;
   window.setWhyPage = setWhyPage;
